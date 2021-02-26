@@ -21,14 +21,13 @@ jobs:
     docker:
       - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
     steps:
-      -checkout
+      - checkout
       - run: echo 'helllo'
 workflows:
   version: 2.1
   build_test_lint:
-    jobs: 
+    jobs:
       - build
       - hithere
       - test:
-          requires:
-            -hithere
+          requires: -hithere
