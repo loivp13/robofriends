@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  builder1:
+    docker: 
+      - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
+  builder2:
+    docker: 
+      - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "trouble" # run the `echo` commande
+  workflows: 
+    version: 2.1
+    builder1_build2"
+      jobs: 
+        - builder1
+        - builder2
