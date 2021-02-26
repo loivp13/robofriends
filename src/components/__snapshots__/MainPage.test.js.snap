@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MainPage without crashing 1`] = `
+<div
+  className="tc"
+>
+  <Header />
+  <SearchBox />
+  <Scroll>
+    <ErrorBoundary>
+      <CardList
+        robots={
+          Array [
+            Object {
+              "email": "john@gmail.com",
+              "id": 3,
+              "name": "John",
+            },
+          ]
+        }
+      />
+    </ErrorBoundary>
+  </Scroll>
+</div>
+`;

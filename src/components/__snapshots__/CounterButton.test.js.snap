@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render card list component 1`] = `
+<button
+  id="counter"
+  onClick={[Function]}
+>
+  Count: 
+  0
+</button>
+`;
